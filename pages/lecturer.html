@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h2>Trinity Unversity</h2>
+        <!-- <a href="#" onclick="showForm('form1')"> <img src="/Icons/Home.png" class="dashlogo"> Dashboard</a>
+				<a href="#" onclick="showForm('form2')"><img src="/Icons/Course Assign.png" alt="" class="dashlogo"> Add Courses</a>
+				<a href="#" onclick="showForm('form3')"><img src="/Icons/University.png" alt="" class="dashlogo"> Add Lecture Room</a>
+				<a href="#" onclick="showForm('form4')"><img src="/Icons/User Location.png" alt="" class="dashlogo"> Add Lecturer</a>
+				<a href="#" onclick="showForm('form5')"> <img src="/Icons/Timetable.png" alt=""> Create Lecture TimeTable</a> -->
+        <!-- <a href="#" onclick="showForm('form6')"
+          ><img src="/assets/Timetable.png" alt="" class="dashlogo" /> Create
+          Exam TimeTable</a -->
+        <!-- > -->
+        <a href="#" id="lecture-timetable-link" onclick="showForm('form7')"
+          ><img src="/assets/Timetable.png" alt="" class="dashlogo" /> View
+          Lecture TimeTable</a
+        >
+        <a href="#" id="exam-timetable-link" onclick="showForm('form8')"
+          ><img src="/assets/Timetable.png" alt="" class="dashlogo" /> View Exam
+          TimeTable</a
+        >
+        <a href="/index.html" onclick="showForm('form9')"
+          ><img src="/assets/logout.png" alt="" class="dashlogo" /> Logout</a
+        >
+      </div>
+
+      <div class="main-content">
+        <div id="form1" class="form-container active">
+          <h2 class="header">Overview</h2>
+          <div class="details">
+            <div class="detail1">
+              <b>Faculty: </b> Basic and Applied Medical Sciences <br />
+            </div>
+            <div class="detail2">
+              <b>Department: </b> Computer Science <br />
+            </div>
+            <div class="detail2"><b>Level: </b> 400</div>
+            <div class="viewtables">
+              <a href="#" class="dashboard-btn1" onclick="showForm('form7')">
+                View Lecture TimeTable</a
+              >
+              <a href="#" class="dashboard-btn2" onclick="showForm('form8')">
+                View Exam TimeTable</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Schedule Exam  -->
+        <!-- <div id="form6" class="form-container">
+					<h2>Schedule Exam</h2>
+					<form id="exam-form">
+						<label for="exam-course-code">Course code</label>
+						<select name="coursecode" id="exam-course-code" required>
+							<option value="1">COSC412</option>
+							<option value="COSC401">COSC401</option> -->
+        <!-- </select>
+
+						<label for="exam-date">Date</label>
+						<input type="date" id="exam-date" value="" required />
+
+						<div class="time">
+							<div class="time1">
+								<label for="exam-start-time">From:</label>
+								<input
+									type="time"
+									id="exam-start-time"
+									class="inputtime"
+									value=""
+									required
+								/>
+							</div>
+							<div class="time2">
+								<label for="exam-end-time">To:</label>
+								<input
+									type="time"
+									id="exam-end-time"
+									class="inputtime"
+									value=""
+									required
+								/>
+							</div>
+						</div>
+
+						<label for="exam-room">Location</label>
+						<select name="location" id="exam-room" required>
+							<option value="1">Room 1</option> -->
+        <!-- <option value="2">Room 2</option> -->
+        <!-- </select> -->
+
+        <!-- <input type="submit" value="Save" id="save" /> -->
+        <!-- <button type="submit"  id="add-exam-tt-btn">save</button>
+					</form>
+				</div> -->
+
+        <!-- veiw Lecture Timetable -->
+        <div id="form7" class="form-container">
+          <h2>Daily Timetable</h2>
+          <table id="timetable1">
+            <thead>
+              <tr>
+                <th>S/N</th>
+                <th>Course Title</th>
+                <th>Course Code</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Lecture Room</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Events will be dynamically added here -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- view Exam TimeTable -->
+        <div id="form8" class="form-container">
+          <h2>Exam TimeTable</h2>
+          <div id="timetable-container">
+            <table id="exam-timetable">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <!-- <th>Level</th> -->
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th>Course</th>
+                  <th>Lecture room</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Events will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/scripts/lecturer.js"></script>
+</html>
